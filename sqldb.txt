@@ -1,0 +1,46 @@
+create database movies;
+use movies;
+
+CREATE TABLE movie_db (
+  title VARCHAR(100) NOT NULL,
+  release_date DATE NOT NULL,
+  color_or_black_and_white BOOLEAN,
+  genre VARCHAR(50),
+  language_type VARCHAR(50),
+  country VARCHAR(100),
+  rating VARCHAR(50),
+  lead_actor VARCHAR(100),
+  director_name VARCHAR(100),
+  lead_actor_likes INT(10),
+  cast_likes INT(10),
+  director_likes INT(10),
+  movie_likes INT(10),
+  imdb_score INT(4),
+  total_reviews INT(10),
+  duration_minutes INT(4),
+  gross_revenue BIGINT,
+  budget BIGINT,
+  PRIMARY KEY (title)
+);
+
+INSERT INTO movie_db (title, release_date, color_or_black_and_white, genre, language_type, country, rating, lead_actor, director_name, lead_actor_likes, cast_likes, director_likes, movie_likes, imdb_score, total_reviews, duration_minutes, gross_revenue, budget) VALUES
+('The Shawshank Redemption', '1994-09-23', FALSE, 'Drama', 'English', 'USA', 'R', 'Tim Robbins', 'Frank Darabont', 10000, 50000, 20000, 200000, 9.3, 2000, 142, 28800000, 25000000),
+('The Godfather', '1972-03-24', FALSE, 'Crime','English, Italian', 'USA', 'R', 'Marlon Brando', 'Francis Ford Coppola', 80000, 100000, 50000, 500000, 9.2, 3000, 175, 245000000, 6000000),
+('Over the hill to the poorhouse', '1920-09-15', FALSE, 'Crime', 'English', 'USA', 'Not Rated', 'Stephen Carr', 'Harry F.Millarde', 2, 4, 0, 0, 4.8, 1, 110, 3000000, 100000),
+('Metropolis', '1927-01-26', FALSE, 'Drama', 'German', 'Germany', 'Not Rated', 'Briditte Helm', 'Fritz Lang', 136, 203, 756, 12000, 8.3, 260, 145, 2643500, 600000),
+('The Broadway Melody', '1929-11-11', FALSE, 'Musical', 'English', 'USA', 'Passed', 'Anita Page', 'Harry Beaumont', 77, 109, 4, 167, 6.3, 36, 100, 20808000, 37900000),
+('42nd Street', '1933-09-29', FALSE, 'Comedy', 'English', 'USA', 'Unrated', 'Ginger Rodgers', 'Lloyd Bacon', 610, 995, 24, 439, 7.7, 65, 89, 2300000, 4390000),
+('Top Hat', '1935-04-15', FALSE, 'Comedy', 'English', 'USA', 'Approved', 'Ginger Rodgers', 'Mark Sandrich', 610, 824, 10, 1000, 7.8, 66, 81, 3000000, 10690000),
+('Mordern Times', '1936-07-11', FALSE, 'Comedy', 'English', 'USA', 'G', 'Paulette Gordard', 'Charles Chaplin', 309, 352, 0, 0, 8.6, 120, 100, 163245, 1500000),
+('Snow White and the Seven Dwarfs', '1937-02-02', TRUE, 'Animation', 'English', 'USA', 'Approved', 'Adriana Caselotti', 'William Cottrell', 82, 229, 0, 0, 7.7, 145, 83, 4925485, 20000000),
+('Gone in the Wind', '1939-12-11', TRUE, 'Drama', 'English', 'USA', 'G', 'Hattie McDaniel', 'Victor Fleming', 503, 1862, 149, 16000, 8.2, 157, 226, 1986552, 3977000),
+('The Wizard of Oz', '1939-09-04', FALSE, 'Adventure', 'English', 'USA', 'Passed', 'Margaret Hamilton', 'Victor Flemming', 695, 2509, 149, 14000, 8.1, 213, 102, 2202612, 22800000),
+('Fantasia', '1940-05-18', TRUE, 'Animation', 'English', 'USA', 'G', 'Leopold Stokowski', 'James Algar', 16, 16, 11, 3000, 7.8, 99, 120, 7640000, 22800000),
+('Pinocchio', '1940-12-10', TRUE, 'Animation', 'English', 'USA', 'Approved', 'Mel Blanc', 'Norman Ferguson', 1000, 1178, 3, 0, 7.5, 105, 88, 8430000, 26000000),
+('Duel in the Sun', '1946-07-06', TRUE, 'Drama', 'English', 'USA', 'Unrated', 'Joseph Cotten', 'King Vidor', 469, 2037, 54, 403, 6.9, 32, 144, 2400000, 8000000),
+('The Best Years of our Lives', '1946-04-26', FALSE, 'Drama', 'English', 'USA', 'Not Rated', 'Myrna Loy', '	William Wyler', 747, 1941, 355, 0, 8.1, 97, 172, 2365000, 37900000),
+('The Lady from Shanghai', '1947-12-07', FALSE, 'Crime', 'English', 'USA', 'Not Rated', 'Rita Hayworth', 'Orson Welles', 1000, 1055, 0, 0, 7.7, 90, 92, 500670, 2300000),
+('The Pirate', '1948-04-07', TRUE, 'Adventure', 'English', 'USA', 'Approved', 'Gladys Cooper', 'Vincente Minnelli', 89, 282, 136, 359, 7.1, 41, 102, 2450000, 3700000),
+('Annie Get your Sun', '1950-02-04', TRUE, 'Biography', 'English', 'USA', 'Passed', 'Keenan Wynn', 'George Sidney', 277, 731, 24, 456, 7.0, 21, 107, 8000000, 37068785),
+('The Greatest Show on Earth', '1952-10-23', TRUE, 'Drama', 'English', 'USA', 'Not Rated', 'Gloria Grahame', 'Cecil B. DeMille', 232, 825, 309, 625, 6.7, 44, 152, 360000, 600000),
+('The Beast from 20,000 Fathoms', '1953-08-22', FALSE, 'Adventure', 'English', 'USA', 'Approved', 'Kenneth Tobey', 'Eugene Louria', 57, 205, 7, 465, 6.7, 67, 80, 2808000, 21000000);
